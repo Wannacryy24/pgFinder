@@ -6,7 +6,7 @@ export  var dataObject = [
         "listingBedLabel": "1 bed",
         "bedrooms": 1,
         "beds": 1,
-        "city": "Chicago",
+        "city": "Delhi",
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "1165154441613525895",

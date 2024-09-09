@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { dataObject } from './Data'
 import Image from './Image'
 import './CardComponent.css'
+import { SearchContext } from './Context/searchContext';
 export default function CardComponent() {
     const [imageIndex , setImageIndex] = useState(0);
+    const {value} = useContext(SearchContext)
+    console.log(value);
     useEffect(()=>{
       const interval =  setInterval(()=>{
             setImageIndex(prevIndex=>{
@@ -12,11 +15,16 @@ export default function CardComponent() {
       })
         },10000);
         return () => clearInterval(interval);
-    },[])
+    },[]);
+    
+    const filteredData = dataObject.filter(item => item.city.toLowerCase().includes(value.toLowerCase()));
+    // console.log(filteredData);
+    // console.log(dataObject);
   return (
     <div className='ContainerDiv'>
         {
-            dataObject.map(item =>{
+            filteredData
+            .map(item =>{
                 return(
                     <div className='cardComponentMainDIv' key={item.id}>
                         <div className='DestinationItem'>

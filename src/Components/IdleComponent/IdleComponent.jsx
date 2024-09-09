@@ -9,13 +9,15 @@ export default function IdleComponent() {
             clearTimeout(timeoutId);
             timeoutId = setTimeout(()=>{
                 setIsVisible(true);
-            },5000)
+            },20000)
         }
-        // window.addEventListener('mousemove' , handleIdleNotificationToShow);
-        // window.addEventListener('keydown' , handleIdleNotificationToShow);
+        window.addEventListener('mousemove' , handleIdleNotificationToShow);
+        window.addEventListener('keydown' , handleIdleNotificationToShow);
+        window.addEventListener('scroll' , handleIdleNotificationToShow);
         return () => {
             window.removeEventListener('mousemove' , handleIdleNotificationToShow);
             window.removeEventListener('keydown' , handleIdleNotificationToShow); 
+            window.removeEventListener('scroll' , handleIdleNotificationToShow); 
             clearTimeout(timeoutId);   
         }
     },[]);

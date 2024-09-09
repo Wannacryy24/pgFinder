@@ -1,13 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./Header.css";
 import LoginDiv from "./LoginDiv";
 import Image from "../Image";
+import { SearchContext} from "../Context/searchContext";
 export default function MainHeader() {
   const [scrolled, setScrolled] = useState(false);  
   const [showLoginDiv , setShowLoginDiv]= useState(false);
-
+  // const [value , setValue] = useState('');
   const ref2 = useRef(null);
-  
+  const {value , setValue} =useContext(SearchContext)
   function handleScroll() {
     if (document.documentElement.scrollTop > 0) {
       setScrolled(true);
@@ -25,13 +26,14 @@ export default function MainHeader() {
 
   function handleLoginDiv(event){
     event.stopPropagation(); 
-    console.log('before',showLoginDiv);
-    setShowLoginDiv(!showLoginDiv);
-    console.log('after',showLoginDiv);
+    setShowLoginDiv(previous=>!previous);
   }
 
+  function handleValue(event){
+    setValue(event.target.value)
+  }
 
-
+  
   return (
     <>
       <header className={`${scrolled ? "newHeader" : ""}`}>
@@ -47,7 +49,7 @@ export default function MainHeader() {
             </div>
             <div className={`middleRightInnerDiv ${scrolled ? "movedUp" : ""}`}>
               <div className="search-Div">
-                <input type="text" placeholder="Search Destination" className="searchInput"/>
+                <input type="text" placeholder="Search Destination" className={scrolled?'searchInput searchMovedUp':"searchInput"} value={value} onChange={handleValue}/>
               </div>
               <div className={`searchDiv ${scrolled ? "movedUpSearchDiv" : ""}`}>
                 <button className={`searchButton`}>

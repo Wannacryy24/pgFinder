@@ -15,8 +15,8 @@ export default function LandingPage() {
     <>
     <div className='landingPageDiv'>
         <Image src='./a.avif' alt=""  className='getReady'/>
-        <Button onClick={handleOpen}>Open</Button>
-        {open && <Notification setOpen={setOpen} open={open}/> }
+        {/* <Button onClick={handleOpen}>Open</Button> */}
+        {/* {open && <Notification setOpen={setOpen} open={open}/> } */}
         <ValueProposition/>
         <Image src="./75off.avif" alt="" className='off75'/>
     </div>
