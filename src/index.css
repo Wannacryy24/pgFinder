@@ -36,3 +36,14 @@ button:hover{
   justify-content: center;
   align-items: center;
 }
+@media(max-width:600px){
+  .getReady{
+    margin-top: 15vh;
+  }
+  .getReady{
+    height: 10vh;
+  }
+  .off75{
+    height: 20vh;
+  }
+}

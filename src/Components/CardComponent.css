@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
 }
+
 .cardComponentMainDIv{
     padding: 20px;
     height: 70vh;
@@ -16,7 +17,6 @@
     flex-direction: column;
     gap: 5px;
 }
-
 
 .imageOfCard{
     width: 100%;
@@ -86,3 +86,26 @@
     font-weight: 600;
 }
 
+@media (max-width:600px){
+    .ContainerDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .cardComponentMainDIv{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        max-height: 55vh;
+        padding-bottom: 10px;
+    }
+    .DestinationItem{
+        width: 80%;
+    }
+    .imageOfCard{
+        
+    }
+}

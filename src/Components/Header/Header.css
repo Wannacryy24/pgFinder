@@ -174,8 +174,14 @@ header{
 
   @media (max-width:600px) {
     header{
-      width: 100%;
+      width: 100vw;
       height: 15vh;
+    }
+    .abodeName{
+      
+    }
+    .userLoginDiv{
+      display: none;
     }
     .rightDiv p{
       display: none;
@@ -198,8 +204,5 @@ header{
     .searchInput{
       width: 100%;
       padding: 0px;
-    }
-    .getReady{
-      margin-top: 20px;
     }
   }
