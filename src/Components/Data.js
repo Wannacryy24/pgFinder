@@ -6,35 +6,16 @@ export  var dataObject = [
         "listingBedLabel": "1 bed",
         "bedrooms": 1,
         "beds": 1,
-        "businessHostLabel": null,
         "city": "Chicago",
-        "configurableContent": null,
-        "contextualPicturesPageInfo": {
-          "hasNextPage": true,
-          "endCursor": "NQ=="
-        },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "1165154441613525895",
-        "isAutoTranslated": false,
-        "isNewListing": false,
-        "isSuperhost": false,
-        "relaxedFilterLabels": null,
         "localizedCityName": "Chicago",
-        "localizedDistanceText": null,
-        "locationTitle": null,
-        "locationContext": null,
         "listingName": "Aloft Chicago Mag",
-        "listingObjType": "REPRESENTATIVE",
-        "neighborhood": null,
-        "listingPreviewAmenityNames": null,
-        "previewTags": [],
         "publicAddress": "Chicago, IL, United States",
         "reviews": [],
         "reviewsCount": 178,
-        "richKickers": null,
+        'pool':true,
         "roomType": "Entire home/apt",
         "roomTypeCategory": "entire_home",
         "roomTypeId": null,
@@ -46,12 +27,8 @@ export  var dataObject = [
         "avgRatingLocalized": "4.71 (178)",
         "accessibilityLabel": "$117 per night, originally $152",
         "discountedPrice": "$117",
-        
-        "infants": 0,
         "checkin": "2024-09-29",
         "checkout": "2024-10-04",
-        "relaxedAmenityIds": null,
-        "categoryTag": null,
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/1165154441613525895?guests=1&adults=1",
         "images": [
@@ -77,8 +54,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [
           {
             "textColor": "#FFFFFF",
@@ -123,7 +99,7 @@ export  var dataObject = [
         "checkout": "2024-09-11",
         "relaxedAmenityIds": null,
         "categoryTag": "Tag:8678",
-        "pets": 0,
+        "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/1166990641479729210?guests=1&adults=1",
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1166990641479729210/original/9ddd71be-cfe5-4fbd-8a2f-07ee136fbacb.jpeg?im_w=720",
@@ -140,7 +116,7 @@ export  var dataObject = [
         "bathrooms": 1,
         "listingBedLabel": "",
         "bedrooms": 1,
-        "beds": null,
+        "beds": 3,
         "businessHostLabel": null,
         "city": "Chicago",
         "configurableContent": null,
@@ -148,8 +124,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "1096954547021163083",
@@ -210,8 +185,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [
           {
             "textColor": "#000000",
@@ -267,11 +241,12 @@ export  var dataObject = [
       },
       {
         "avgRating": 4.57,
+        'pool':true,
         "listingBathroomLabel": "2 shared baths",
         "bathrooms": 2,
         "listingBedLabel": "1 bed",
         "bedrooms": 1,
-        "beds": 1,
+        "beds": 2,
         "businessHostLabel": null,
         "city": "Chicago",
         "configurableContent": null,
@@ -279,8 +254,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [],
         "listingGuestLabel": "1 guest",
         "id": "878208604809836365",
@@ -343,8 +317,7 @@ export  var dataObject = [
           "hasNextPage": false,
           "endCursor": null
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [
           {
             "textColor": "#FFFFFF",
@@ -412,8 +385,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "854370910509250602",
@@ -451,7 +423,8 @@ export  var dataObject = [
         "checkout": "2024-09-20",
         "relaxedAmenityIds": null,
         "categoryTag": null,
-        "pets": 0,
+        'pool':true,
+        "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/854370910509250602?guests=1&adults=1",
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-690609862774713974/original/1d12c303-c2b9-4734-99f0-b4eeb7f85ec0.jpeg?im_w=720",
@@ -476,8 +449,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "753059732737671055",
@@ -509,13 +481,13 @@ export  var dataObject = [
         "avgRatingLocalized": "4.71 (176)",
         "accessibilityLabel": "$72 per night, originally $123",
         "discountedPrice": "$72",
-
+        'pool':true,
         "infants": 0,
         "checkin": "2024-09-15",
         "checkout": "2024-09-20",
         "relaxedAmenityIds": null,
         "categoryTag": null,
-        "pets": 0,
+        "pets": 2,
         "webURL": "https://www.airbnb.com/rooms/753059732737671055?guests=1&adults=1",
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-753059732737671055/original/7e00cebb-fa65-483e-8c4f-d13dec06c010.jpeg?im_w=720",
@@ -540,8 +512,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [],
         "listingGuestLabel": "2 guests",
         "id": "878893471211139160",
@@ -602,8 +573,7 @@ export  var dataObject = [
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        "emergencyMessage": null,
-        "listingFloatingMessage": null,
+        
         "formattedBadges": [
           {
             "textColor": "#000000",

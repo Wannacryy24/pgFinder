@@ -1,3 +1,7 @@
+.p-universal-css{
+    display: flex;
+    align-items: center;
+}
 .cardComponentMainDIv{
     padding: 20px;
     height: 70vh;
@@ -13,8 +17,10 @@
     gap: 5px;
 }
 
+
 .imageOfCard{
     width: 100%;
+    height: 30vh !important;
     height: 35vh;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
@@ -27,20 +33,56 @@
 
 .placeName{
     font-family: 'Segoe UI';
+    display: flex;
+    padding-left: 1rem;
+    font-weight: 600;
     font-size: 1.2rem;
+}
+
+.placeName p{
+
 }
 
 .cityDetails{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.rating {
+    display: flex;
+    padding-left:1rem;
+    flex-direction: row;
+    gap: 1rem;
+}
+.cityDetails{
+    display: flex;
+    text-align: left;
 
 }
-.locationSvg svg path{
-    color: blueviolet;
-}
-.span{
+.cityDetails p{
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-left: 1rem;
+    font-weight: 600;
 }
+.priceDiv{
+    display: flex;
+    padding-left: 1rem;
+}
+
+.bedSpan{
+    height: 1.5rem;
+    width: 1.5rem;
+
+}
+
+.petDiv , .bedDiv{
+    display: flex;
+    gap: 1rem;
+    padding-left: 1rem;
+}
+.petDiv , .bedDiv p{
+    font-weight: 600;
+}
+

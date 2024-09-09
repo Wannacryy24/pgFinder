@@ -67,11 +67,11 @@ header{
     align-items: center;
     gap: 20px;
 }
-button img{
+.searchButton img{
     height: 40px;
     width: 40px;
 }
-button{
+.searchButton{
     background-color: transparent;
     border: none;
 }
@@ -170,4 +170,36 @@ button{
     width: 100%;
     align-items:baseline;
     gap: 20px;
+  }
+
+  @media (max-width:600px) {
+    header{
+      width: 100%;
+      height: 15vh;
+    }
+    .rightDiv p{
+      display: none;
+    }
+    .middleRightInnerDiv {
+
+      height: 5vh;
+      width: 70vw;
+    }
+    .movedUp{
+      width: 100%;
+    }
+    .search-Div{
+      padding: 0px;
+    }
+    .searchDiv {
+      height: 4vh;
+      width: 4vh;
+    }
+    .searchInput{
+      width: 100%;
+      padding: 0px;
+    }
+    .getReady{
+      margin-top: 20px;
+    }
   }

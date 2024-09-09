@@ -5,7 +5,9 @@ import Image from "../Image";
 export default function MainHeader() {
   const [scrolled, setScrolled] = useState(false);  
   const [showLoginDiv , setShowLoginDiv]= useState(false);
+
   const ref2 = useRef(null);
+  
   function handleScroll() {
     if (document.documentElement.scrollTop > 0) {
       setScrolled(true);
@@ -28,6 +30,8 @@ export default function MainHeader() {
     console.log('after',showLoginDiv);
   }
 
+
+
   return (
     <>
       <header className={`${scrolled ? "newHeader" : ""}`}>
@@ -42,7 +46,7 @@ export default function MainHeader() {
               <p>Experiences</p>
             </div>
             <div className={`middleRightInnerDiv ${scrolled ? "movedUp" : ""}`}>
-              <div>
+              <div className="search-Div">
                 <input type="text" placeholder="Search Destination" className="searchInput"/>
               </div>
               <div className={`searchDiv ${scrolled ? "movedUpSearchDiv" : ""}`}>

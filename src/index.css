@@ -4,11 +4,13 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-family: "Moderustic", sans-serif;
   font-optical-sizing: auto;
-  
+}
+button:hover{
+  cursor: pointer;
 }
 .getReady{
   width: 100%;
