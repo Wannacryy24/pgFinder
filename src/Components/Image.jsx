@@ -1,6 +1,5 @@
 import React from 'react'
-
-export default function Image({ src, alt, width, height , className, onLoad, onError}) {
+export default function Image({ src, alt, width, height , className, onLoad, onError, onClick}) {
   return (
     <img 
       src={src}
@@ -10,6 +9,7 @@ export default function Image({ src, alt, width, height , className, onLoad, onE
       className={className}
       onLoad={onLoad}
       onError={onError}
+      onClick={onClick}
     />
   )
 }

@@ -8,7 +8,7 @@
     font-style: normal;    
 }
 
-header{
+.headerToggle{
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -19,8 +19,9 @@ header{
     padding: 1rem;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: fixed;
-    
+    color: black;
 }
+
 .newHeader{
     height: 12vh;
     transform: translateY(0px);
@@ -130,11 +131,11 @@ header{
     height: 2rem;
     border: none;
     width: 23vw;
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 400;
   }
-  .searchInput:focus{
-    border: none;
-    box-shadow: none;
-  }
+
   .searchMovedUp{
     border: none;
     width: 13vw;
@@ -177,6 +178,37 @@ header{
     align-items:baseline;
     gap: 20px;
   }
+
+  .toggle{
+    height: 40px;
+    width: 40px;
+
+  }
+  .toggle:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+  body.dark-mode {
+    background-color: #333;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   @media (max-width:600px) {
     header{

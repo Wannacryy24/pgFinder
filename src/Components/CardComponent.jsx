@@ -1,23 +1,27 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { dataObject } from './Data'
+// import { dataObject } from './Data'
 import Image from './Image'
 import './CardComponent.css'
 import { SearchContext } from './Context/searchContext';
-export default function CardComponent() {
+
+
+export default function CardComponent({roomData}) {
+    
     const [imageIndex , setImageIndex] = useState(0);
     const {value} = useContext(SearchContext)
-    console.log(value);
+    // console.log(value);
     useEffect(()=>{
       const interval =  setInterval(()=>{
             setImageIndex(prevIndex=>{
-                const totalImages = dataObject[0]?.images.length || 1; 
+                const totalImages = roomData.rooms[0]?.images.length || 1; 
                 return (prevIndex + 1) % totalImages;
       })
         },10000);
         return () => clearInterval(interval);
     },[]);
     
-    const filteredData = dataObject.filter(item => item.city.toLowerCase().includes(value.toLowerCase()));
+    const filteredData = roomData.rooms.filter(item => item.city.toLowerCase().includes(value.toLowerCase()));
+
     // console.log(filteredData);
     // console.log(dataObject);
   return (
@@ -26,7 +30,7 @@ export default function CardComponent() {
             filteredData
             .map(item =>{
                 return(
-                    <div className='cardComponentMainDIv' key={item.id}>
+                    <div className='cardComponentMainDIv' key={item.id} onClick={handleNewContent}>
                         <div className='DestinationItem'>
                             <Image src={item.images[imageIndex]} alt="" className='imageOfCard'/>
                             <div className='placeName'>

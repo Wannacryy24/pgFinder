@@ -16,6 +16,8 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: white;
+    color: black;
 }
 
 .imageOfCard{
