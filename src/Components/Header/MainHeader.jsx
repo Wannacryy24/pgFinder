@@ -49,7 +49,7 @@ export default function MainHeader() {
         <div className="upperHeader">
           <div className="leftDiv">
             <Image src={"./abode.svg"} alt="" className="headerIcon" />
-            <p className="abodeName">abode</p>
+            <p className={scrolled ? 'abodeNameHide':'abodeName'}>airbnb</p>
           </div>
           <div className={`middleDiv`}>
             <div className={`middleLeftInnerDiv ${scrolled ? "hidden" : ""}`}>
@@ -86,7 +86,7 @@ export default function MainHeader() {
             </div>
           </div>
           <div className={`rightDiv`}>
-            <p>abode your home</p>
+            <p>airbnb your home</p>
             <Image
               src={mode ? "./light.svg" : "./dark.svg"}
               alt=""

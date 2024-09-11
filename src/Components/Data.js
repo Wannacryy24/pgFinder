@@ -25,7 +25,7 @@ export  var dataObject = [
         "wishlistedCount": null,
         "title": "Apartment in Chicago",
         "avgRatingLocalized": "4.71 (178)",
-        "accessibilityLabel": "$117 per night, originally $152",
+        "accessibilityLabel": "1170 per night, originally 1520",
         "discountedPrice": "$117",
         "checkin": "2024-09-29",
         "checkout": "2024-10-04",
@@ -91,7 +91,7 @@ export  var dataObject = [
         "wishlistedCount": null,
         "title": "Room in Chicago",
         "avgRatingLocalized": "5.0 (3)",
-        "accessibilityLabel": "$31 per night, originally $41",
+        "accessibilityLabel": "310 per night, originally 410",
         "discountedPrice": "$31",
 
         "infants": 0,

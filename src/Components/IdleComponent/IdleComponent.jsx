@@ -9,7 +9,7 @@ export default function IdleComponent() {
             clearTimeout(timeoutId);
             timeoutId = setTimeout(()=>{
                 setIsVisible(true);
-            },20000)
+            },150000)
         }
         window.addEventListener('mousemove' , handleIdleNotificationToShow);
         window.addEventListener('keydown' , handleIdleNotificationToShow);
@@ -29,7 +29,7 @@ export default function IdleComponent() {
                         <Image src='./idle.png' className='idleImage'/>
                     </div>
                     <div className='detailsContainer'>
-                        <p className="abodeName abodeIdle">Abode</p>
+                        <p className="abodeName abodeIdle">Airbnb</p>
                         <p className='stillSearching'>Still searching for a great deal?</p>
                         <p className='createP'>Create an account to unlock more savings or refresh to see the latest hotel prices.</p>
                         <button className='createAccountBtn'>Create an account</button>

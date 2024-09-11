@@ -25,7 +25,7 @@
 .newHeader{
     height: 12vh;
     transform: translateY(0px);
-   
+    z-index: 1;
     justify-content: center;
     transition: height 0.5s ease-out, width 0.3s ease-out, transform 0.3s ease-out;
 }
@@ -215,9 +215,6 @@
       width: 100vw;
       height: 15vh;
     }
-    .abodeName{
-      
-    }
     .userLoginDiv{
       display: none;
     }
@@ -225,12 +222,13 @@
       display: none;
     }
     .middleRightInnerDiv {
-
+      margin-top: 2rem;
       height: 5vh;
       width: 70vw;
     }
     .movedUp{
       width: 100%;
+      margin-top: 0;
     }
     .search-Div{
       padding: 0px;
@@ -243,4 +241,35 @@
       width: 100%;
       padding: 0px;
     }
+    .headerToggle{
+      height: 10rem;
+    }
+    .middleRightInnerDiv {
+
+    }
+    .newHeader{
+      height: 10vh;
+    }
+    .movedUpSearchDiv{
+      display: flex;
+      justify-content: center;
+      height: 1.5rem;
+      width: 1.5rem;
+
+    }
+    .searchMovedUp{
+      width: 100%;
+      font-size: 1rem;
+      padding-left: 0;
+      margin-left: -1rem;
+    }
+    .abodeName{
+      font-size: 1.1rem;
+      height: 1rem;
+      width: 1rem;
+    }
+    .abodeNameHide{
+      display: none;
+    }
+
   }

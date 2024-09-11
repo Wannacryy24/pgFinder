@@ -18,6 +18,26 @@ createServer({
     //jo models ke andar naam hoga vahi tumko yahana lena padega hamesha ek sa jaise yahana room hai 
     server.create("room", 
       {
+        'latitude':41.92701832388281,
+        'longitude': -87.64454633661946,
+        "host":'joseph',
+        'bathroom':true,
+          offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+        },
+        'yearHosting': 8,
+        'note':'Please note that the building is under construction',       
         "avgRating": 4.57,
         'pool':true,
         "listingBathroomLabel": "2 shared baths",
@@ -32,7 +52,7 @@ createServer({
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        
+        "emergencyMessage": null,
         "formattedBadges": [],
         "listingGuestLabel": "1 guest",
         "id": "878208604809836365",
@@ -71,6 +91,12 @@ createServer({
         "categoryTag": null,
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/878208604809836365?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-878208604809836365/original/971b9744-1bf7-420c-af54-f37e70a6b55f.png?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-878208604809836365/original/8fe3a076-7e3f-447b-9308-674307b04ae8.png?im_w=720",
@@ -84,7 +110,24 @@ createServer({
 
 
     server.create("room", 
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'window',
+          wifi:true,
+          kitchen:true,
+          parking:null,
+          co2:false,
+          smokeAlarm:false,
+          dedicatedWorkSpace:null,
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.92,
         "listingBathroomLabel": "0 shared baths",
         "bathrooms": 0,
@@ -143,6 +186,12 @@ createServer({
         "categoryTag": "Tag:8678",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/855828343232989376?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODU1ODI4MzQzMjMyOTg5Mzc2/original/96a455c7-22e3-40ed-acc3-491c8bd7e1df.png?im_w=720",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODU1ODI4MzQzMjMyOTg5Mzc2/original/18dd455d-efc6-4386-942d-0adc348188e5.png?im_w=720",
@@ -154,7 +203,27 @@ createServer({
       }
     )
     server.create("room",
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.56,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -209,6 +278,12 @@ createServer({
         'pool':true,
         "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/854370910509250602?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-690609862774713974/original/1d12c303-c2b9-4734-99f0-b4eeb7f85ec0.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-690609862774713974/original/8138ddfe-720b-4a29-8f59-8ac6df638e63.jpeg?im_w=720",
@@ -220,7 +295,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Split Ac',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.71,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -274,6 +369,12 @@ createServer({
         "categoryTag": null,
         "pets": 2,
         "webURL": "https://www.airbnb.com/rooms/753059732737671055?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-753059732737671055/original/7e00cebb-fa65-483e-8c4f-d13dec06c010.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-753059732737671055/original/72b659ae-e1b1-4f28-93d1-38f9b3aae9a0.jpeg?im_w=720",
@@ -285,7 +386,27 @@ createServer({
       }
     )
     server.create('room' ,
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.47,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -337,6 +458,12 @@ createServer({
         "categoryTag": null,
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/878893471211139160?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-878893471211139160/original/fd15c45f-b8ea-4437-a0bb-551cfb293742.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-878893471211139160/original/dc9866de-fe2a-4e06-8b89-8ae709dbc6bb.jpeg?im_w=720",
@@ -348,7 +475,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.93,
         "listingBathroomLabel": "1 shared bath",
         "bathrooms": 1,
@@ -407,6 +554,12 @@ createServer({
         "categoryTag": "Tag:8678",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/51781759?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-51781759/original/0cb80957-f6b1-4053-84ce-5e2a63140d74.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-51781759/original/ae4c1241-5e5b-4f9f-982b-c225d2c22f68.jpeg?im_w=720",
@@ -418,7 +571,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.92,
         "listingBathroomLabel": "0 shared baths",
         "bathrooms": 0,
@@ -477,6 +650,12 @@ createServer({
         "categoryTag": "Tag:8678",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/855828343232989376?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODU1ODI4MzQzMjMyOTg5Mzc2/original/96a455c7-22e3-40ed-acc3-491c8bd7e1df.png?im_w=720",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6ODU1ODI4MzQzMjMyOTg5Mzc2/original/18dd455d-efc6-4386-942d-0adc348188e5.png?im_w=720",
@@ -488,7 +667,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.57,
         'pool':true,
         "listingBathroomLabel": "2 shared baths",
@@ -535,7 +734,6 @@ createServer({
         "avgRatingLocalized": "4.57 (14)",
         "accessibilityLabel": "1220 per night, originally 2500",
         "discountedPrice": "1220",
-
         "infants": 0,
         "checkin": "2024-09-09",
         "checkout": "2024-09-14",
@@ -543,6 +741,12 @@ createServer({
         "categoryTag": null,
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/878208604809836365?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-878208604809836365/original/971b9744-1bf7-420c-af54-f37e70a6b55f.png?im_w=720",
           "https://a0.muscache.com/im/pictures/miso/Hosting-878208604809836365/original/8fe3a076-7e3f-447b-9308-674307b04ae8.png?im_w=720",
@@ -554,7 +758,24 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+          dedicatedWorkSpace:true,
+          },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 5,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -568,7 +789,6 @@ createServer({
           "hasNextPage": true,
           "endCursor": "NQ=="
         },
-        
         "formattedBadges": [
           {
             "textColor": "#000000",
@@ -577,6 +797,7 @@ createServer({
             "backgroundColor": null
           }
         ],
+        
         "listingGuestLabel": "1 guest",
         "id": "1131483721804078583",
         "isAutoTranslated": false,
@@ -587,7 +808,7 @@ createServer({
         "localizedDistanceText": null,
         "locationTitle": null,
         "locationContext": null,
-        "listingName": "S3 Private cozy room. NO parking. 15min to O'Hare",
+        "listingName": "S3 Private cozy room. NO parking. 15mi",
         "listingObjType": "REGULAR",
         "neighborhood": null,
         "listingPreviewAmenityNames": null,
@@ -613,6 +834,12 @@ createServer({
         "categoryTag": "Tag:8678",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/1131483721804078583?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTQ4MzcyMTgwNDA3ODU4Mw%3D%3D/original/8da4dc1c-081d-4b78-88f9-a008936d0700.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTQ4MzcyMTgwNDA3ODU4Mw%3D%3D/original/20cf50bd-353d-45fd-8938-e2d403a8097d.jpeg?im_w=720",
@@ -624,7 +851,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.61,
         "listingBathroomLabel": "1 private bath",
         "bathrooms": 1,
@@ -676,6 +923,12 @@ createServer({
         "categoryTag": null,
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/1096954547021163083?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1096954547021163083/original/649b4f6d-211b-4754-b9bd-3c8d76980120.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1096954547021163083/original/1c16a659-5d2a-47bc-a668-7164b04e8545.jpeg?im_w=720",
@@ -687,7 +940,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 5,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -747,6 +1020,12 @@ createServer({
         "categoryTag": "Tag:8678",
         "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/1166990641479729210?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1166990641479729210/original/9ddd71be-cfe5-4fbd-8a2f-07ee136fbacb.jpeg?im_w=720",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1166990641479729210/original/ef653f5d-c737-4434-87f2-05ed5d408f26.jpeg?im_w=720",
@@ -758,7 +1037,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.71,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -790,6 +1089,12 @@ createServer({
         "checkout": "2024-10-04",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/1165154441613525895?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1165154441613525895/original/10795459-804c-4b55-9beb-fc36624fc51f.png?im_w=720",
           "https://a0.muscache.com/im/pictures/prohost-api/Hosting-1165154441613525895/original/23399f07-40b4-42e4-a91a-6ec46440bab3.png?im_w=720",
@@ -801,7 +1106,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.70,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -833,6 +1158,12 @@ createServer({
         "checkout": "2024-10-10",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/2233445566778899001?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/10d20f69-50a5-4da9-8a61-8a06f8e42ad7.jpg?im_w=720",
           "https://a0.muscache.com/im/pictures/0408d78f-869b-4396-8b37-9470bf1663c3.jpg?im_w=720",
@@ -845,7 +1176,27 @@ createServer({
       }
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+          dedicatedWorkSpace:true,
+          
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.80,
         "listingBathroomLabel": "2 baths",
         "bathrooms": 2,
@@ -877,6 +1228,12 @@ createServer({
         "checkout": "2024-10-15",
         "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/3344556677889900112?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/miso/Hosting-1192160113078643595/original/14c553cc-7d8a-4909-bd1d-201de148b086.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/miso/Hosting-1192160113078643595/original/f9c8e73c-1109-47d1-b9a5-d3948e501de3.jpeg?im_w=1440",
@@ -888,7 +1245,27 @@ createServer({
       }
     )
     server.create('room' , 
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.65,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -920,6 +1297,12 @@ createServer({
         "checkout": "2024-10-20",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/4455667788990011223?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1198563721657724766/original/bd380f72-7523-4207-a8be-ef5c92f83535.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1198563721657724766/original/21beaa4a-3319-49bb-bd12-d54a679ef7ee.jpeg?im_w=1440",
@@ -930,7 +1313,27 @@ createServer({
       }      
     );
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.75,
         "listingBathroomLabel": "2 baths",
         "bathrooms": 2,
@@ -962,6 +1365,12 @@ createServer({
         "checkout": "2024-10-25",
         "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/5566778899001122334?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1117210179713518752/original/bae0baa0-29cf-4b32-bbb9-b1dc6cf6820f.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1117210179713518752/original/18fe28a4-77d0-4ad1-acc7-0928e5b311e5.jpeg?im_w=1440",
@@ -974,7 +1383,27 @@ createServer({
       
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.60,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -1006,6 +1435,12 @@ createServer({
         "checkout": "2024-10-30",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/6677889900112233445?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1192599625218751634/original/20a1b09d-bcd9-4ad2-848b-47fd7be0b33d.jpeg?im_w=1200",
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1192599625218751634/original/df048c7b-eea2-4834-b2e2-e3fab55b752a.jpeg?im_w=1440",
@@ -1017,7 +1452,27 @@ createServer({
       
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          
+
+          dedicatedWorkSpace:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.78,
         "listingBathroomLabel": "2 baths",
         "bathrooms": 2,
@@ -1049,6 +1504,12 @@ createServer({
         "checkout": "2024-11-06",
         "pets": 1,
         "webURL": "https://www.airbnb.com/rooms/7788990011223344556?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           "https://a0.muscache.com/im/pictures/hosting/Hosting-1192814453191326215/original/97fb50c7-96fe-40a6-864a-aa0f68a0ddf2.jpeg?im_w=1440",
           'https://a0.muscache.com/im/pictures/hosting/Hosting-1192814453191326215/original/a6cb6eef-1746-4309-b743-aa99b3ffcf7c.jpeg?im_w=1440',
@@ -1059,7 +1520,24 @@ createServer({
       
     )
     server.create('room',
-      {
+      {"host":'joseph',
+        'bathroom':true,
+        offers:{
+          bathroom:true,
+          hairDryes:true,
+          hotWater:true,
+          led:true,
+          ac:true,
+          acType:'Central air conditioning',
+          wifi:true,
+          kitchen:true,
+          parking:true,
+          co2:false,
+          smokeAlarm:false,
+          dedicatedWorkSpace:true,
+        },
+        'yearHosting':'8',
+        'note':'Please note that the building is under construction',
         "avgRating": 4.70,
         "listingBathroomLabel": "1 bath",
         "bathrooms": 1,
@@ -1091,6 +1569,12 @@ createServer({
         "checkout": "2024-11-11",
         "pets": 0,
         "webURL": "https://www.airbnb.com/rooms/8899001122334455667?guests=1&adults=1",
+        "verified": {
+          "enabled": false,
+          "badgeText": "Plus",
+          "badgeSecondaryText": "Verified",
+          "kickerBadgeType": "filled"
+        },
         "images": [
           'https://a0.muscache.com/im/pictures/hosting/Hosting-1170851003134360359/original/6b62a436-9f4a-457c-b465-8f9ddbe66d46.jpeg?im_w=1440',
           'https://a0.muscache.com/im/pictures/hosting/Hosting-1170851003134360359/original/51e07335-3a6f-47a4-8ef3-a37e25e510bc.jpeg?im_w=1440',
