@@ -139,6 +139,8 @@
   .searchMovedUp{
     border: none;
     width: 13vw;
+    font-size: 1rem;
+    font-weight: 400;  
   }
 
   .userLoginDiv{
@@ -193,7 +195,6 @@
     background-color: #333;
     color: white;
   }
-
 
 
 
