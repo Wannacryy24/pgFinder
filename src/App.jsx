@@ -6,7 +6,6 @@ import { SearchContextProvider } from "./Components/Context/searchContext";
 import Footer from "./Components/Footer/Footer";
 import { useEffect, useState } from "react";
 // import './server'
- 
 
 function App() {
 
@@ -19,10 +18,9 @@ function App() {
         <MainHeader />
         <LandingPage />
         <CardComponent/>
+        <Footer />
       </SearchContextProvider>
-      <Footer />
     </>
   );
 }
-
 export default App;

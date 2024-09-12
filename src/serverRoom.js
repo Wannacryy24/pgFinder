@@ -281,7 +281,7 @@ export default function makeServerRequest() {
       });
     },
     seeds(server) {
-      server.createList('room', 1000);
+      server.createList('room', 60);
     },
   });
 }
