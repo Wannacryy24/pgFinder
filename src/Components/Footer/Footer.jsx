@@ -11,11 +11,11 @@ export default function Footer() {
   const [isnewFooter , setIsNewFooter] = useState(window.innerWidth < 800); 
 
   const handleResize = () => {
-    setIsNewFooter(window.innerHeight<800);
+    setIsNewFooter(window.innerWidth<800);
   }
 
   useEffect(()=>{
-    
+    setIsNewFooter(window.innerWidth < 800);
     window.addEventListener('resize', handleResize);
     
     return () => window.removeEventListener('resize', handleResize);
@@ -25,7 +25,9 @@ export default function Footer() {
   return (
     <>
       {
-        isnewFooter ?(<FooterMoreDetails newWidth={isnewFooter}/>) :(
+        isnewFooter ?(
+        <FooterMoreDetails newWidth={isnewFooter}/>
+        ) :(
           <>
           <hr />
           {upArrow ? (
