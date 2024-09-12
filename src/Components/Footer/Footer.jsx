@@ -8,10 +8,10 @@ import { SearchContext } from '../Context/searchContext';
 export default function Footer() {
   const {upArrow, setUpArrow} =useContext(SearchContext);
   // const [upArrow, setUpArrow] = useState(false);
-  const [isnewFooter , setIsNewFooter] = useState(window.innerWidth < 600); 
+  const [isnewFooter , setIsNewFooter] = useState(window.innerWidth < 800); 
 
   const handleResize = () => {
-    setIsNewFooter(window.innerHeight<600);
+    setIsNewFooter(window.innerHeight<800);
   }
 
   useEffect(()=>{
