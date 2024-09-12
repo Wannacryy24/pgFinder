@@ -10,17 +10,17 @@ export default function makeServerRequest() {
           return `room-${i}`;
         },
         latitude() {
-          return (Math.random() * (90 - (-90)) + (-90)).toFixed(6); // Random latitude between -90 and 90
+          return (Math.random() * (90 - (-90)) + (-90)).toFixed(6); 
         },
         longitude() {
-          return (Math.random() * (180 - (-180)) + (-180)).toFixed(6); // Random longitude between -180 and 180
+          return (Math.random() * (180 - (-180)) + (-180)).toFixed(6);
         },
         host() {
           const hosts = ['Joseph', 'Alice', 'Bob', 'Eve', 'Mallory'];
           return hosts[Math.floor(Math.random() * hosts.length)];
         },
         bathroom() {
-          return Math.random() > 0.5; // Random boolean
+          return Math.random() > 0.5; 
         },
         offers() {
           return {
@@ -39,7 +39,7 @@ export default function makeServerRequest() {
           };
         },
         yearHosting() {
-          return Math.floor(Math.random() * 10); // Random number between 0 and 9
+          return Math.floor(Math.random() * 10); 
         },
         note() {
           const notes = [
@@ -52,27 +52,27 @@ export default function makeServerRequest() {
           return notes[Math.floor(Math.random() * notes.length)];
         },
         avgRating() {
-          return (Math.random() * (5 - 1) + 1).toFixed(2); // Random average rating between 1 and 5
+          return (Math.random() * (5 - 1) + 1).toFixed(2); 
         },
         pool() {
-          return Math.random() > 0.5; // Random boolean
+          return Math.random() > 0.5; 
         },
         listingBathroomLabel() {
           const labels = ["1 shared bath", "2 shared baths", "1 private bath"];
           return labels[Math.floor(Math.random() * labels.length)];
         },
         bathrooms() {
-          return Math.floor(Math.random() * 3) + 1; // Random number between 1 and 3
+          return Math.floor(Math.random() * 3) + 1;
         },
         listingBedLabel() {
           const labels = ["1 bed", "2 beds", "3 beds"];
           return labels[Math.floor(Math.random() * labels.length)];
         },
         bedrooms() {
-          return Math.floor(Math.random() * 3) + 1; // Random number between 1 and 3
+          return Math.floor(Math.random() * 3) + 1;
         },
         beds() {
-          return Math.floor(Math.random() * 3) + 1; // Random number between 1 and 3
+          return Math.floor(Math.random() * 3) + 1;
         },
         businessHostLabel() {
           return null;
@@ -102,10 +102,10 @@ export default function makeServerRequest() {
           return names[Math.floor(Math.random() * names.length)];
         },
         reviewsCount() {
-          return Math.floor(Math.random() * 100); // Random number between 0 and 99
+          return Math.floor(Math.random() * 100); 
         },
         starRating() {
-          return (Math.random() * (5 - 1) + 1).toFixed(1); // Random star rating between 1.0 and 5.0
+          return (Math.random() * (5 - 1) + 1).toFixed(1); 
         },
         title() {
           const titles = [
@@ -120,7 +120,7 @@ export default function makeServerRequest() {
           return titles[Math.floor(Math.random() * titles.length)];
         },
         avgRatingLocalized() {
-          return `${(Math.random() * (5 - 1) + 1).toFixed(2)} (${Math.floor(Math.random() * 100)})`; // Random rating with count
+          return `${(Math.random() * (5 - 1) + 1).toFixed(2)} (${Math.floor(Math.random() * 100)})`; 
         },
         accessibilityLabel() {
           const labels = [
@@ -130,20 +130,20 @@ export default function makeServerRequest() {
           return labels[Math.floor(Math.random() * labels.length)];
         },
         discountedPrice() {
-          return `${(Math.random() * (2000 - 100) + 100).toFixed(2)}`; // Random price between 100 and 2000
+          return `${(Math.random() * (2000 - 100) + 100).toFixed(2)}`; 
         },
         checkin() {
           const date = new Date();
           date.setDate(date.getDate() + Math.floor(Math.random() * 30));
-          return date.toISOString().split('T')[0]; // Random check-in date within 30 days
+          return date.toISOString().split('T')[0]; 
         },
         checkout() {
           const date = new Date();
           date.setDate(date.getDate() + Math.floor(Math.random() * 30) + 1);
-          return date.toISOString().split('T')[0]; // Random checkout date within 30 days
+          return date.toISOString().split('T')[0]; 
         },
         pets() {
-          return Math.random() > 0.5; // Random boolean
+          return Math.random() > 0.5;
         },
         webURL(i) {
           return `https://www.airbnb.com/rooms/${i}?guests=1&adults=1`;
@@ -272,13 +272,16 @@ export default function makeServerRequest() {
 
     routes() {
       this.namespace = "api";
-      this.get("/abodeData", (schema) => {
-        return schema.rooms.all().models;
+      this.get("/abodeData", (schema,request) => {
+      const page = parseInt(request.queryParams.page, 10) || 1;
+      const perPage = 12;
+      const offset = (page - 1) * perPage;
+      const rooms = schema.rooms.all().models.slice(offset, offset + perPage);
+      return rooms;
       });
     },
-
     seeds(server) {
-      server.createList('room', 25);
+      server.createList('room', 1000);
     },
   });
 }

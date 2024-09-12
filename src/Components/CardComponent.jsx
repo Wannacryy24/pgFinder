@@ -1,17 +1,63 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Image from './Image'
 import './CardComponent.css'
 import { SearchContext } from './Context/searchContext';
 import ActiveComponent from './ActiveComponent';
+import '../serverRoom'
 
-
-
-export default function CardComponent({roomData}) {
-    
+export default function CardComponent() {
+    const [roomData, setRoomData] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [imageIndex , setImageIndex] = useState(0);
     const [hoverId , setHoverId] = useState(null);
     const [activeItem , setActiveItem] =useState(null); 
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(true);
     const {value} = useContext(SearchContext);
+
+    useEffect(() => {
+        fetchData();
+    }, [page]);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!loading && hasMore && window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+                setPage(prevPage => prevPage + 1);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+                window.removeEventListener('scroll', handleScroll);
+        };
+    }, [loading, hasMore]);
+
+    const fetchData = () => {
+        setLoading(true);
+        fetch(`/api/abodeData?page=${page}`)
+        .then(res => {
+            if (!res.ok) {
+            throw new Error('Network response was not ok');
+            }
+            return res.json();
+        })
+        .then(dataMirage => {
+            if (dataMirage.length === 0) {
+                setHasMore(false);
+            } else {
+                setRoomData(prevData => {
+                    const existingIds = new Set(prevData.map(item => item.id));
+                    const newData = dataMirage.filter(item => !existingIds.has(item.id));
+                    return [...prevData, ...newData];
+                });
+            }
+            setLoading(false);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            setLoading(false);
+        });
+    };
+
     useEffect(()=>{
       const interval =  setInterval(()=>{
             setImageIndex(prevIndex=>{
@@ -20,7 +66,7 @@ export default function CardComponent({roomData}) {
       })
         },10000);
         return () => clearInterval(interval);
-    },[]);
+    },[roomData]);
     
     const filteredData = roomData.filter(item => item.city.toLowerCase().includes(value.toLowerCase()));
         
@@ -32,8 +78,9 @@ export default function CardComponent({roomData}) {
     const handleBackClick = () => {
         setActiveItem(null);
     };
+
   return (
-      <div className={activeItem ? 'itemDetailDiv' :'ContainerDiv'} >
+      <div className={activeItem ? 'itemDetailDiv' :'ContainerDiv'}>
         {
             activeItem ? <ActiveComponent activeItem={activeItem} onBackClick={handleBackClick}/> 
                 : (
