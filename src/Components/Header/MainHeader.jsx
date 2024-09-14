@@ -106,7 +106,7 @@ export default function MainHeader() {
             </div>
           </div>
           <div className={`rightDiv`}>
-            <li><Link to='/abode'>airbnb your home</Link></li>
+            <li className="airbnb_your_home"><Link to='/abode'>airbnb your home</Link></li>
             <Image
               src={mode ? "/light.svg" : "/dark.svg"}
               alt=""
