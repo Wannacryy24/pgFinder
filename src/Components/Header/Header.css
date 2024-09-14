@@ -7,7 +7,9 @@
     font-weight: 700;
     font-style: normal;    
 }
-
+a:visited{
+  color: #E0565B;
+}
 .headerToggle{
     background-color: white;
     display: flex;

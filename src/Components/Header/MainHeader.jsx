@@ -4,15 +4,26 @@ import LoginDiv from "./LoginDiv";
 import Image from "../Image";
 import { SearchContext } from "../Context/searchContext";
 import ToggleLightDark from "./ToggleLightDark";
+import { Link, Navigate, useNavigate, useSearchParams } from "react-router-dom";
+
 export default function MainHeader() {
+  const [searchParams , setSearchParams] = useSearchParams();
   const [scrolled, setScrolled] = useState(false);
   const [showLoginDiv, setShowLoginDiv] = useState(false);
   // const [value , setValue] = useState('');
   const [mode, setMode] = useState(false);
-
+  const [experience , setExperience] = useState(false);
   const ref2 = useRef(null);
-
   const { value, setValue } = useContext(SearchContext);
+  const navigate = useNavigate();
+
+  useEffect(()=>{
+    const query = searchParams.get('q');
+    if(query){
+      setValue(query);
+      console.log(query);
+    }
+  },[searchParams, setValue , value])
 
   function handleScroll() {
     if (document.documentElement.scrollTop > 0) {
@@ -40,7 +51,14 @@ export default function MainHeader() {
   }
 
   function handleValue(event) {
-    setValue(event.target.value);
+    const newSearchedValue = event.target.value;
+    setValue(newSearchedValue);
+    setSearchParams({q:newSearchedValue});
+  }
+
+  const handleExperience = () => {
+    setExperience(!experience);
+    navigate('/experience');
   }
 
   return (
@@ -48,13 +66,15 @@ export default function MainHeader() {
       <header className={`${scrolled ? "newHeader headerToggle" : "headerToggle"}`}>
         <div className="upperHeader">
           <div className="leftDiv">
-            <Image src={"./abode.svg"} alt="" className="headerIcon" />
-            <p className={scrolled ? 'abodeNameHide':'abodeName'}>airbnb</p>
+            <Link to='/'>
+            <Image src={"/abode.svg"} alt="" className="headerIcon" />
+            </Link>
+            <p className={scrolled ? 'abodeNameHide':'abodeName'}><Link to='/'>airbnb</Link></p>
           </div>
           <div className={`middleDiv`}>
             <div className={`middleLeftInnerDiv ${scrolled ? "hidden" : ""}`}>
               <p>Stays</p>
-              <p>Experiences</p>
+              <p onClick={handleExperience}>Experiences</p>
             </div>
             <div className={`middleRightInnerDiv ${scrolled ? "movedUp" : ""}`}>
               <div className="search-Div">
@@ -86,9 +106,9 @@ export default function MainHeader() {
             </div>
           </div>
           <div className={`rightDiv`}>
-            <p>airbnb your home</p>
+            <li><Link to='/abode'>airbnb your home</Link></li>
             <Image
-              src={mode ? "./light.svg" : "./dark.svg"}
+              src={mode ? "/light.svg" : "/dark.svg"}
               alt=""
               className={mode ? "light-mode toggle" : "dark-mode toggle"}
               onClick={toggleTheme}
@@ -132,24 +152,3 @@ export default function MainHeader() {
     </>
   );
 }
-
-// useEffect(()=>{
-//   const url = 'https://airbnb13.p.rapidapi.com/search-geo?ne_lat=52.51&ne_lng=13.41&sw_lat=52.41&sw_lng=13.31&checkin=2025-01-12&checkout=2025-01-13&adults=1&children=0&infants=0&pets=0&page=1&currency=USD';
-//   const options = {
-//   method: 'GET',
-//   headers: {
-//     'x-rapidapi-key': '748283d9aemsh4895272a0db519cp108502jsnf71726b49828',
-//     'x-rapidapi-host': 'airbnb13.p.rapidapi.com'
-//   }
-//   };
-//   const fetchData = async()=>{
-//     try {
-//       const response = await fetch(url, options);
-//       const result = await response.text();
-//       console.log(result);
-//     } catch (error) {
-//       console.error(error);
-//     }
-//   }
-//   // fetchData();
-// },[]);

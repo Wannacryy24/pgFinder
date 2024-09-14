@@ -8,8 +8,7 @@ import Fridge from './AmenitiesComponents/Fridge';
 import Smoke from './AmenitiesComponents/Smoke';
 
 export default function OffersComponent({activeItem}) {
-    console.log('activeItem' , activeItem);
-    
+    // console.log('activeItem' , activeItem);
   return (
     <>
             <div className='one-Div'>

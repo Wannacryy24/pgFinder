@@ -4,6 +4,7 @@ import './CardComponent.css'
 import { SearchContext } from './Context/searchContext';
 import ActiveComponent from './ActiveComponent';
 import '../serverRoom'
+import { useNavigate } from 'react-router-dom'; 
 
 export default function CardComponent() {
     const [roomData, setRoomData] = useState([]);
@@ -14,22 +15,13 @@ export default function CardComponent() {
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
     const {value} = useContext(SearchContext);
+    const navigate = useNavigate();
+
 
     useEffect(() => {
         fetchData();
     }, [page]);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (!loading && hasMore && window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
-                setPage(prevPage => prevPage + 1);
-            }
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-                window.removeEventListener('scroll', handleScroll);
-        };
-    }, [loading, hasMore]);
 
     const fetchData = () => {
         setLoading(true);
@@ -58,6 +50,7 @@ export default function CardComponent() {
         });
     };
 
+
     useEffect(()=>{
       const interval =  setInterval(()=>{
             setImageIndex(prevIndex=>{
@@ -67,17 +60,34 @@ export default function CardComponent() {
         },10000);
         return () => clearInterval(interval);
     },[roomData]);
-    
-    const filteredData = roomData.filter(item => item.city.toLowerCase().includes(value.toLowerCase()));
-        
+
+    const filteredData = roomData.filter(item => item.city.toLowerCase().includes(value.toLowerCase())|| item.listingName.toLowerCase().includes(value.toLowerCase()));
+
+
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (!loading && hasMore && window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+                setPage(prevPage => prevPage + 1);
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+                window.removeEventListener('scroll', handleScroll);
+        };
+    }, [loading, hasMore]);
+
     function handleNewContent(item) {
         console.log(item);
+        localStorage.setItem('activeRoom', JSON.stringify(item));
+        navigate(`/card/${item.id}`);
         setActiveItem(item);
     }
     
     const handleBackClick = () => {
         setActiveItem(null);
     };
+
 
   return (
       <div className={activeItem ? 'itemDetailDiv' :'ContainerDiv'}>

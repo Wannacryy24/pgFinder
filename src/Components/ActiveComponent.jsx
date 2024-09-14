@@ -1,15 +1,72 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ActiveComponent.css";
 import MyMap from "./Header/MyMap";
 import OffersComponent from "./OffersComponent";
-export default function ActiveComponent({ activeItem, onBackClick }) {
-  
+import { useNavigate, useParams } from 'react-router-dom'; 
+
+export default function ActiveComponent({ onBackClick }) {
+    const { id } = useParams();
+    const [activeItem, setActiveItem] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+    const navigate = useNavigate()
+
+    
+    useEffect(() => {
+        console.log('ActiveComponent loaded with id:', id);
+     
+    }, [id]);
+    useEffect(() => {
+        const storedData = localStorage.getItem('activeRoom');
+
+        
+        if (storedData) {
+            const roomData = JSON.parse(storedData);
+            if (roomData.id === id) {
+                setActiveItem(roomData);
+                setLoading(false);
+                return;  
+            }
+        }
+
+        
+        setLoading(true);
+        setError(false);
+
+        fetch(`/api/abodeData/${id}`)
+          .then(res => {
+            if (!res.ok) {
+              throw new Error('Failed to fetch data');
+            }
+            return res.json();
+          })
+          .then(data => {
+        
+            localStorage.setItem('activeRoom', JSON.stringify(data));
+            setActiveItem(data);
+            setLoading(false);
+          })
+          .catch(err => {
+            console.error(err);
+            setError(true);
+            setLoading(false);
+          });
+    }, [id]);
+
+      if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (!activeItem) {
+        return <div>Error loading data.</div>;
+    }
+
+
   return (
     <div className="Container-Detail-Div">
-
         <div className="backDiv">
             <button className="button"
-                onClick={onBackClick}>
+                onClick={()=>navigate('/')}>
                 <div className="button-box">
                     <span className="button-elem">
                     <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
@@ -33,22 +90,22 @@ export default function ActiveComponent({ activeItem, onBackClick }) {
             {activeItem.listingName} {`(${activeItem.city})`}
         </div>
 
-        <div className="Container-Detail-Images">
-            <div className="left-detail-Image-Div">
-                <img src={activeItem.images[0]} alt="" />
-            </div>
-
-            <div className="centre-detail-Image-Div">
-                <img src={activeItem.images[1]} alt="" />
-                <img src={activeItem.images[2]} alt="" />
-            </div>
-
-            <div className="right-detail-Image-Div">
-                <img src={activeItem.images[3]} alt="" />
-                <img  src={activeItem.images[4]} alt="" />
-            </div>
-        </div>
-
+        {activeItem.images && (
+                <div className="Container-Detail-Images">
+                    <div className="left-detail-Image-Div">
+                        <img src={activeItem.images[0]} alt="" />
+                    </div>
+                    <div className="centre-detail-Image-Div">
+                        <img src={activeItem.images[1]} alt="" />
+                        <img src={activeItem.images[2]} alt="" />
+                    </div>
+                    <div className="right-detail-Image-Div">
+                        <img src={activeItem.images[3]} alt="" />
+                        <img src={activeItem.images[4]} alt="" />
+                    </div>
+                </div>
+            )}
+            
         <div>
             <p className="active-item-listingName">{activeItem.publicAddress}</p>
             <div className="active-item-more-details">

@@ -272,16 +272,26 @@ export default function makeServerRequest() {
 
     routes() {
       this.namespace = "api";
-      this.get("/abodeData", (schema,request) => {
-      const page = parseInt(request.queryParams.page, 10) || 1;
-      const perPage = 12;
-      const offset = (page - 1) * perPage;
-      const rooms = schema.rooms.all().models.slice(offset, offset + perPage);
-      return rooms;
+
+      // Route to get paginated list of rooms
+      this.get("/abodeData", (schema, request) => {
+        const page = parseInt(request.queryParams.page, 10) || 1;
+        const perPage = 12;
+        const offset = (page - 1) * perPage;
+        const rooms = schema.rooms.all().models.slice(offset, offset + perPage);
+        return rooms;
+      });
+
+      // Route to get a specific room by ID
+      this.get("/abodeData/:id", (schema, request) => {
+        const id = request.params.id;
+        const room = schema.rooms.find(id);
+        return room ? room.attrs : { error: "Room not found" };
       });
     },
+
     seeds(server) {
-      server.createList('room', 60);
+      server.createList("room", 60); // Seed with 60 room records
     },
   });
 }
