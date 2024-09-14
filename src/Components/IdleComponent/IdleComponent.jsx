@@ -26,7 +26,7 @@ export default function IdleComponent() {
             <div className='blurDiv'>
                 <div className='idleComponentDiv'>
                     <div className='imageContainer'>
-                        <Image src='./idle.png' className='idleImage'/>
+                        <Image src='/idle.png' className='idleImage'/>
                     </div>
                     <div className='detailsContainer'>
                         <p className="abodeName abodeIdle">Airbnb</p>
