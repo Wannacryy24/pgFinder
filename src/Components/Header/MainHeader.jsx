@@ -58,7 +58,7 @@ export default function MainHeader() {
 
   const handleExperience = () => {
     setExperience(!experience);
-    navigate('/experience');
+    // navigate('/experience');
   }
 
   return (
@@ -106,7 +106,8 @@ export default function MainHeader() {
             </div>
           </div>
           <div className={`rightDiv`}>
-            <li className="airbnb_your_home"><Link to='/abode'>airbnb your home</Link></li>
+            {/* <li className="airbnb_your_home"><Link to='/abode'>airbnb your home</Link></li> */}
+            <li className="airbnb_your_home">airbnb your home</li>
             <Image
               src={mode ? "/light.svg" : "/dark.svg"}
               alt=""
