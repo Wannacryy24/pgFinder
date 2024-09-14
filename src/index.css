@@ -8,6 +8,9 @@
   font-family: "Moderustic", sans-serif;
   font-optical-sizing: auto;
 }
+a:visited{
+  color: #E0565B
+}
 
 body{
   background-color: white;
